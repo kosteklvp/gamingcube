@@ -5,20 +5,20 @@ import org.springframework.stereotype.Service;
 import org.vaadin.artur.helpers.CrudService;
 
 import com.gamingcube.app.data.entity.Club;
-import com.gamingcube.app.data.repository.ClubRepository;
+import com.gamingcube.app.data.repository.ClubRepo;
 
 @Service
 public class ClubService extends CrudService<Club, Long> {
 
-  private ClubRepository clubRepository;
+  private ClubRepo clubRepo;
 
-  public ClubService(@Autowired ClubRepository clubRepository) {
-    this.clubRepository = clubRepository;
+  public ClubService(@Autowired ClubRepo clubRepo) {
+    this.clubRepo = clubRepo;
   }
 
   @Override
-  protected ClubRepository getRepository() {
-    return clubRepository;
+  protected ClubRepo getRepository() {
+    return clubRepo;
   }
 
 }

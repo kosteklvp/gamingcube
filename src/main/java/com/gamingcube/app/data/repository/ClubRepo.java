@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.gamingcube.app.data.entity.Club;
 
 @Repository
-public interface ClubRepository extends JpaRepository<Club, Long> {
+public interface ClubRepo extends JpaRepository<Club, Long> {
 
 }

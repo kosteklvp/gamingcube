@@ -10,12 +10,11 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 
 import com.gamingcube.app.data.entity.Club;
 import com.gamingcube.app.data.entity.Player;
-import com.gamingcube.app.data.repository.ClubRepository;
-import com.gamingcube.app.data.repository.PlayerRepository;
+import com.gamingcube.app.data.repository.ClubRepo;
+import com.gamingcube.app.data.repository.PlayerRepo;
 import com.gamingcube.app.uefa.JSONPlayers;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 
@@ -26,8 +25,8 @@ public class DataPreparation {
 
   private static final Path MAIN_JSON_FILE = Path.of("./src/main/resources/JSONFiles/Players.json");
 
-  @Bean
-  public CommandLineRunner loadData(ClubRepository clubRepository, PlayerRepository playerRepository) {
+//  @Bean
+  public CommandLineRunner loadData(ClubRepo clubRepository, PlayerRepo playerRepository) {
     return args -> {
       String jsonContent = Files.readString(MAIN_JSON_FILE);
 

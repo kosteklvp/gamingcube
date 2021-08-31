@@ -3,7 +3,7 @@ package com.gamingcube.app.views;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.gamingcube.app.views.about.AboutView;
+import com.gamingcube.app.views.about.OpenGameweekView;
 import com.gamingcube.app.views.checkoutform.PlayersView;
 import com.gamingcube.app.views.helloworld.HelloWorldView;
 import com.vaadin.flow.component.Component;
@@ -110,7 +110,7 @@ public class MainLayout extends AppLayout {
 
         new MenuItemInfo("Players", "la la-globe", PlayersView.class), //
 
-        new MenuItemInfo("About", "la la-file", AboutView.class) //
+        new MenuItemInfo("About", "la la-file", OpenGameweekView.class) //
 
     };
     List<RouterLink> links = new ArrayList<>();

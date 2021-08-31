@@ -5,20 +5,20 @@ import org.springframework.stereotype.Service;
 import org.vaadin.artur.helpers.CrudService;
 
 import com.gamingcube.app.data.entity.Player;
-import com.gamingcube.app.data.repository.PlayerRepository;
+import com.gamingcube.app.data.repository.PlayerRepo;
 
 @Service
 public class PlayerService extends CrudService<Player, Long> {
 
-  private PlayerRepository playerRepository;
+  private PlayerRepo playerRepo;
 
-  public PlayerService(@Autowired PlayerRepository playerRepository) {
-    this.playerRepository = playerRepository;
+  public PlayerService(@Autowired PlayerRepo playerRepo) {
+    this.playerRepo = playerRepo;
   }
 
   @Override
-  protected PlayerRepository getRepository() {
-    return playerRepository;
+  protected PlayerRepo getRepository() {
+    return playerRepo;
   }
 
 }
